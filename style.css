@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdfcfc;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.content a {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    gap: 14px;
+}
+
+.icons {
+    display: flex;
+    gap: 14px;
+}
+
+.icons i {
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    justify-content: center;
+    text-align: center;
+    gap: 26px;
+    background-color: #fff;
+    opacity: 0.8;
+    background-image: radial-gradient(#2d6a4f 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75px, #ffffff 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+.btns {
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btns a,
+i {
+    color: #070707;
+    text-decoration: none;
+}
+
+.btns:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+}
+
+.btns a i {
+    position: relative;
+    top: 2px;
+}
+
+header .search {
+    position: relative;
+    width: 30%;
+    margin-top: 10px;
+}
+
+header .search input {
+    outline: none;
+    border: none;
+    border-radius: 18px;
+    width: 100%;
+    padding: 18px 20px;
+    box-shadow: 0 4px 70px -10px rgba(0, 0, 0, 0.6);
+}
+
+header .search button {
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search button:hover {
+    scale: 1.2;
+    transition: all .15s ease-in-out;
+}
+
+.heading {
+    padding: 12px;
+}
+
+.pc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.pc h5 {
+    text-align: center;
+    border: 1.5px solid black;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.pc a {
+    text-decoration: none;
+}
+
+.pc h5 i {
+    rotate: 45deg;
+}
+
+.course .items .top img {
+    width: 120px;
+    height: 120px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.heading .course {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin-bottom: 100px;
+}
+
+.heading .course .items {
+    width: 30%;
+}
+
+.info a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.heading .course .items .top,
+.heading .course .items .bottom {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    padding: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    border-bottom: 1px dashed gray;
+}
+
+.heading .course .items .info p {
+    margin-top: 2px;
+    color: gray;
+    font-size: 13px;
+}
+
+
+.heading .course .items .bottom {
+    border: none;
+    justify-content: space-between;
+    border-top: 1px dashed gray;
+}
+
+.heading .course .items .bottom .price p {
+    color: #888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+
+
+.heading .course .items .bottom h5.tag,
+.heading .course .items .bottom .discount>h5 {
+    font-weight: 500;
+    background-color: rgba(255, 132, 0, 0.689);
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+
+.heading .course .items .bottom .time p,
+h6 {
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+/**************responsive*/
+@media only screen and (max-width: 768px) {
+    .content a {
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+    .content a:nth-child(5) {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icons i {
+        font-size: .9rem;
+    }
+
+    header .search {
+        position: relative;
+        width: 50%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .search input {
+        height: 50px;
+    }
+
+    .heading .course .items .top img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .heading .course .items .top {
+        flex-direction: column;
+    }
+
+    .heading .course .items .top,
+    .heading .course .items .bottom {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .heading .course .items .bottom .discount h5,
+    .heading .course .items .bottom h5.tag {
+        width: 100%;
+        height: 30px;
+    }
+
+    .heading .course .items .bottom h6 {
+        margin-bottom: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 545px) {
+    .content a {
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+    .content a:nth-child(5) {
+        display: none;
+    }
+
+    .content a:nth-child(6) {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icons i {
+        font-size: .8rem;
+    }
+
+    header .search {
+        position: relative;
+        width: 70%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .search input {
+        height: 40px;
+    }
+
+    .heading .course .items {
+        width: 45%;
+    }
+
+    .heading .course .items .bottom .discount .time {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .content a {
+        font-weight: 400;
+        font-size: 11px;
+    }
+
+    .content a:nth-child(5) {
+        display: none;
+    }
+
+    .content a:nth-child(6) {
+        display: none;
+    }
+
+    .icons i:nth-child(2) {
+        display: none;
+    }
+
+    .icons i {
+        font-size: .7rem;
+    }
+
+    header .search {
+        position: relative;
+        width: 70%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .search input {
+        height: 40px;
+    }
+
+    .heading .course .items .top img {
+        height: 270px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .heading .course .items {
+        width: 100%;
+    }
+}
